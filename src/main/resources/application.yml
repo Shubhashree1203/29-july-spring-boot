@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: EMSApplication
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/ems_data_jpa?createDatabaseIfNotExist=true
+    username: root
+    password: root
+
+  jpa:
+    show-sql: true
+    properties:
+      format_sql: true
+    hibernate:
+      ddl-auto: create
+    database-platform: org.hibernate.dialect.MySQLDialect
+
+server:
+  port: 8081
